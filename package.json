@@ -15,6 +15,22 @@
   "engines": {
     "node": ">=18"
   },
+  "pipeline": {
+    "dev": {
+      "dependsOn": [
+        "^dev"
+      ],
+      "outputs": []
+    },
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
+    }
+  },
   "packageManager": "npm@10.8.2",
   "workspaces": [
     "apps/*",
